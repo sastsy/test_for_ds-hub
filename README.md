@@ -13,7 +13,7 @@
 Для использования этого проекта, клонируйте репозиторий на свой локальный компьютер и установите зависимости:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/sastsy/test_for_ds-hub
+cd test_for_ds-hub
 pip install -r requirements.txt
 ```
