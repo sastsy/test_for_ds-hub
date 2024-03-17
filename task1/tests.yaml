@@ -1,0 +1,45 @@
+tests:
+  - name: test_list
+    data: [1, 2, 3]
+    function: sum
+    expected_output: 6
+
+  - name: test_list_nested
+    data: [1, [2, 3], [4, 5, 6], 7]
+    function: sum
+    expected_output: [1, 5, 15, 7]
+
+  - name: test_list_nested_single_item
+    data: [[1, [2, 3, [4, 5, [6]]]]]
+    function: sum
+    expected_output: [[1, [2, 3, [4, 5, 6]]]]
+  
+  - name: test_example_1
+    data: {'a': [1, [2, 3, 4], [5, 6, 7]], 'b': [{'c': 8, 'd': 9}, {'e': 3, 'f': 4}, 8]}
+    function: sum
+    expected_output: {'a': [1, 9, 18], 'b': [17, 7, 8]}
+  
+  - name: test_example_2
+    data: {'a': [1, 9, 18], 'b': [17, 7, 8]}
+    function: sum
+    expected_output: {'a': 28, 'b': 32}
+  
+  - name: test_example_3
+    data: {'a': 28, 'b': 32}
+    function: sum
+    expected_output: 60
+  
+  - name: test_example_4
+    data: 60
+    function: sum
+    expected_output: 60
+  
+  - name: test_with_max_func
+    data: {'a': [1, [2, 3, 4], [5, 6, 7]], 'b': [{'c': 8, 'd': 9}, {'e': 3, 'f': 4}, 8]}
+    function: max
+    expected_output: {'a': [1, 4, 7], 'b': [9, 4, 8]}
+
+  - name: test_empty_list
+    data: []
+    function: max
+    expected_output: []
